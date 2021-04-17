@@ -20,8 +20,10 @@ namespace prilozhua
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int k = 0;
+            k++;
             OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Excel (*.XLS)|*.XLS";
+            opf.Filter = "Excel (*.XLS)|*.XLS"; // фильры а чё
             opf.ShowDialog();
             DataTable tb = new DataTable();
             string filename = opf.FileName;
@@ -41,6 +43,26 @@ namespace prilozhua
             DataTable tb1 = ds.Tables[0];
             cn.Close();
             dataGridView1.DataSource = tb1;
+            if (k > 1)
+            {
+                string ConStr1 = String.Format("Provider=Microsoft.Jet.OLEDB.4.0; Data Source={0}; Extended Properties=Excel 8.0;", filename);
+                System.Data.DataSet ds1 = new System.Data.DataSet("EXCEL");
+                OleDbConnection cn1 = new OleDbConnection(ConStr);
+                cn.Open();
+                DataTable schemaTable1 = cn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
+                string sheet11 = (string)schemaTable.Rows[0].ItemArray[2];
+                string select1 = String.Format("SELECT * FROM [{0}]", sheet1);
+                OleDbDataAdapter ad1 = new OleDbDataAdapter(select, cn);
+                ad.Fill(ds);
+                DataTable tb11 = ds.Tables[0];
+                cn.Close();
+                dataGridView1.DataSource = tb1;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

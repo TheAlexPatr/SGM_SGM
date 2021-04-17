@@ -15,6 +15,9 @@ namespace prilozhua
     public partial class Form4 : Form
     {
         private Form5 baza_danih = new Form5();
+        private Form6 jotaro = new Form6();
+        private Form7 fugo = new Form7();
+        private Form8 sanek = new Form8();
         public Form4()
         {
             InitializeComponent();
@@ -40,7 +43,10 @@ namespace prilozhua
                     DialogResult rezult = MessageBox.Show("Невозможно открыть выбранный файл",
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }   }
+
+
+            }   
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -50,6 +56,30 @@ namespace prilozhua
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int ID = Convert.ToInt32(textBox2.Text);
+            if(ID == 1)
+            {
+                jotaro.ShowDialog();
+            }
+
+            if (ID == 2)
+            {
+                fugo.ShowDialog();
+            }
+
+            if (ID == 3)
+            {
+                sanek.ShowDialog();
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ namespace prilozhua
 {
     public partial class Form1 : Form
     {
+        private Form9 test = new Form9();
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +30,16 @@ namespace prilozhua
         {
            Form4 rabotodateli = new Form4();
             rabotodateli.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            test.ShowDialog();
         }
     }
 }

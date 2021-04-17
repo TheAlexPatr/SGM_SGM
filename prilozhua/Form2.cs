@@ -17,6 +17,7 @@ namespace prilozhua
         public Form2()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,6 +74,7 @@ namespace prilozhua
         Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
         private void button4_Click(object sender, EventArgs e)
         {
+
             ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
             //Таблица.
             ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
@@ -81,13 +83,19 @@ namespace prilozhua
             {
                 for (int j = 0; j < dataGridView1.ColumnCount; j++)
                 {
-                    ExcelWorkSheet.Cells[i + 1, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
+                    ExcelWorkSheet.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value;
                 }
             }
+
             //Вызываем нашу созданную эксельку.
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
             System.Diagnostics.Process.GetCurrentProcess().Kill();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }
