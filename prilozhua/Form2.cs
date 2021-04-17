@@ -87,6 +87,7 @@ namespace prilozhua
             //Вызываем нашу созданную эксельку.
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
+            System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
     }
 }
