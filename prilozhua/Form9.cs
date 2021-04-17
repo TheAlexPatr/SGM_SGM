@@ -33,8 +33,18 @@ namespace prilozhua
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cifra = Convert.ToInt32(textBox1.Text);
-            if(checkBox1.Checked)
+            try
+            {
+                cifra = Convert.ToInt32(textBox1.Text);
+            }
+
+            catch
+            {
+                MessageBox.Show("Введите число!");
+            }
+
+
+            if (checkBox1.Checked)
             {
                 string m = "Вы очник";
                 obuchka = m;
@@ -59,10 +69,12 @@ namespace prilozhua
                 obuchenie = m;
             }
 
-            if(cifra == 5)
-            {
-                summa = summa + 5;
-            }
+                if (cifra == 5)
+                {
+                    summa = summa + 5;
+                }
+            
+
             string a = @"C:\Users\Alex\Desktop\disane\sertifikat.txt";
             FileStream sa = new FileStream(a, FileMode.OpenOrCreate);
             sa.Close();
