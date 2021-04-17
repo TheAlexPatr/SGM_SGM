@@ -23,7 +23,20 @@ namespace prilozhua
 
         public void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+            try
+            {
+                int ocenka = Convert.ToInt32(textBox1.Text);
+                int b = 6;
+                if (b <= ocenka)
+                {
+                    MessageBox.Show("Число не может превышать пять");
+                }
+            }
+
+            catch(System.FormatException)
+            {
+                MessageBox.Show("Принимаются только цифровые значения");
+            }
         }
 
         public void textBox4_TextChanged(object sender, EventArgs e)
