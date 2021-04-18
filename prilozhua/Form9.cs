@@ -68,13 +68,10 @@ namespace prilozhua
                 string m = "Вы учитесь в ССУЗе";
                 obuchenie = m;
             }
-
                 if (cifra == 5)
                 {
                     summa = summa + 5;
                 }
-            
-
             string a = @"C:\Users\Alex\Desktop\disane\sertifikat.txt";
             FileStream sa = new FileStream(a, FileMode.OpenOrCreate);
             sa.Close();
@@ -83,7 +80,6 @@ namespace prilozhua
             Thread openFile = new Thread(otkroy);
             openFile.Start();
         }
-
         public void otkroy()
         {
             string a = @"C:\Users\Alex\Desktop\disane\sertifikat.txt";

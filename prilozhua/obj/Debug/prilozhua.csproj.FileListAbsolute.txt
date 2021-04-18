@@ -19,3 +19,5 @@ C:\Users\Alex\Desktop\Code\prilozhua\prilozhua\obj\Debug\prilozhua.Form6.resourc
 C:\Users\Alex\Desktop\Code\prilozhua\prilozhua\obj\Debug\prilozhua.Form7.resources
 C:\Users\Alex\Desktop\Code\prilozhua\prilozhua\obj\Debug\prilozhua.Form8.resources
 C:\Users\Alex\Desktop\Code\prilozhua\prilozhua\obj\Debug\prilozhua.Form9.resources
+C:\Users\Alex\Desktop\Code\prilozhua\prilozhua\obj\Debug\prilozhua.Form10.resources
+C:\Users\Alex\Desktop\Code\prilozhua\prilozhua\obj\Debug\prilozhua.Form11.resources

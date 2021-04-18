@@ -90,7 +90,8 @@ namespace prilozhua
             //Вызываем нашу созданную эксельку.
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
+            ExcelWorkBook.Close();
+            //System.Diagnostics.Process.GetCurrentProcess().Kill();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
